@@ -15,6 +15,7 @@ from win32gui import FindWindow, GetWindowRect
 from hacks import bruteforce, casinofingerprint, casinokeypad, cayofingerprint, cayovoltage, hostnumber
 
 VERSION = "Lester-VER3.0"
+BUILD_ID = "2026-06-20-update-test"
 OVERLAY_MS = 7000
 REPO_OWNER = "Hingdragon417"
 REPO_NAME = "Lester-Ver3.0"
