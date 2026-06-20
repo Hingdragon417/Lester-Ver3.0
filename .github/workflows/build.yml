@@ -1,0 +1,40 @@
+name: Build
+on:
+  pull_request:
+    branches: [ '**' ]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  push:
+    branches: [ '**' ]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: >
+          python -m pip install --upgrade pip
+
+          pip install -r requirements.txt
+
+      - name: Create executable
+        run: |
+          pyinstaller --onefile --icon icon.ico -n Lester-VER2.0 main.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with: 
+          name: Lester-VER2.0.exe
+          path: dist/Lester-VER2.0.exe
