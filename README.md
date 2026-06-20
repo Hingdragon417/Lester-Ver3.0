@@ -11,9 +11,8 @@ Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile/GTA-V-Heist-Hel
 - `/` shows a small top-right keybind reminder overlay.
 - `F10` BruteForce Matcher now detects the active moving column instead of relying only on a fixed column order.
 - BruteForce timing now tracks the falling red letter and predicts when it will hit the blue bar.
-- BruteForce debug output is enabled so bad timing can be tuned with `bruteforce_debug.png` and `bruteforce_debug.txt`.
 - Startup update check asks before updating when a newer GitHub version is available.
-- Project cleanup removed generated caches, old debug files, and unused development tools.
+- Project cleanup removed generated caches and unused development tools.
 - A rebuilt Windows exe is included at `dist/Lester-Ver3.0.exe`.
 
 ## Keybinds
@@ -69,7 +68,6 @@ On startup, Lester checks the latest push on `Hingdragon417/Lester-Ver3.0`.
 - `1920x1080` is recommended. Other resolutions might work, but some matchers depend on screen coordinates.
 - On `Keypad Cracker`, press `F6` on the latest pattern.
 - The overlay may not appear over exclusive fullscreen games. Borderless/windowed fullscreen is recommended.
-- BruteForce debug files are intentionally ignored by Git and are generated only when testing F10.
 
 ## Showcase
 
