@@ -12,6 +12,7 @@ Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile/GTA-V-Heist-Hel
 - `F10` BruteForce Matcher now detects the active moving column instead of relying only on a fixed column order.
 - BruteForce timing now tracks the falling red letter and predicts when it will hit the blue bar.
 - BruteForce debug output is enabled so bad timing can be tuned with `bruteforce_debug.png` and `bruteforce_debug.txt`.
+- Startup update check asks before updating when a newer GitHub version is available.
 - Project cleanup removed generated caches, old debug files, and unused development tools.
 - A rebuilt Windows exe is included at `dist/Lester-Ver3.0.exe`.
 
@@ -52,6 +53,15 @@ pyinstaller --clean --noconfirm Lester-Ver3.0.spec
 ```
 
 The rebuilt exe will be written to `dist/Lester-Ver3.0.exe`.
+
+## Auto Updates
+
+On startup, Lester checks the latest push on `Hingdragon417/Lester-Ver3.0`.
+
+- If you are running the packaged exe and the repo has a newer `dist/Lester-Ver3.0.exe`, Lester asks before downloading it.
+- If you are running from a Git checkout, Lester asks before running `git pull --ff-only origin main`.
+- If the update is accepted, Lester updates and restarts itself.
+- If GitHub or the network is unavailable, the update check is skipped and the app continues normally.
 
 ## Notes
 
