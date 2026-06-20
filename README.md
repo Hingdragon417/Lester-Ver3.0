@@ -1,29 +1,68 @@
 # Lester-VER3.0
-GTA Online Heist Hacking(Minigame) Macro
 
-Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile/GTA-V-Heist-Help) for `Fingerprint Scanner` and `Retro Fingerprint Scanner`
+GTA Online heist hacking minigame macro.
 
-# How To Use
-- Press `/` to show keybind reminder overlay
-- Press `F4` for `Exit`
-- Press `F5` for `Fingerprint Scanner`
-- Press `F6` for `Keypad Cracker`
-- Press `F7` for `Retro Fingerprint Scanner`
-- Press `F8` for `Voltage Hack`
-- Press `F9` for `Host Number Matcher`
-- Press `F10` for `BruteForce Matcher`
+This is Hingdragon417's fork of Lester, based on the original project by JUSTDIE. It keeps the existing heist helpers and adds quality-of-life updates, BruteForce matcher work, and a rebuilt Windows executable.
 
-# Setup
-- Download or Clone the repository
-- Install the requirements `pip install -r requirements.txt`
-- Run `python main.py`
+Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile/GTA-V-Heist-Help) for `Fingerprint Scanner` and `Retro Fingerprint Scanner`.
 
-# Warning
-- `Python 3.8` is the recommended python version for this repository
-- `1920x1080` resolution is recommended but other resolutions **might** work
-- On `Keypad Cracker`, you have to press `F6` on the latest pattern
+## What's New In This Fork
 
-# Showcase
+- `/` shows a small top-right keybind reminder overlay.
+- `F10` BruteForce Matcher now detects the active moving column instead of relying only on a fixed column order.
+- BruteForce timing now tracks the falling red letter and predicts when it will hit the blue bar.
+- BruteForce debug output is enabled so bad timing can be tuned with `bruteforce_debug.png` and `bruteforce_debug.txt`.
+- Project cleanup removed generated caches, old debug files, and unused development tools.
+- A rebuilt Windows exe is included at `dist/Lester-Ver3.0.exe`.
+
+## Keybinds
+
+- `/` - Show keybind reminder overlay
+- `F4` - Exit
+- `F5` - Fingerprint Scanner
+- `F6` - Keypad Cracker
+- `F7` - Retro Fingerprint Scanner
+- `F8` - Voltage Hack
+- `F9` - Host Number Matcher
+- `F10` - BruteForce Matcher
+
+## Setup
+
+### Run The Exe
+
+Download or clone the repository, then run:
+
+```text
+dist/Lester-Ver3.0.exe
+```
+
+### Run From Source
+
+Python 3.8 is recommended.
+
+```text
+pip install -r requirements.txt
+python main.py
+```
+
+### Rebuild The Exe
+
+```text
+pyinstaller --clean --noconfirm Lester-Ver3.0.spec
+```
+
+The rebuilt exe will be written to `dist/Lester-Ver3.0.exe`.
+
+## Notes
+
+- The app waits for a window named `Grand Theft Auto V` before enabling hotkeys.
+- `1920x1080` is recommended. Other resolutions might work, but some matchers depend on screen coordinates.
+- On `Keypad Cracker`, press `F6` on the latest pattern.
+- The overlay may not appear over exclusive fullscreen games. Borderless/windowed fullscreen is recommended.
+- BruteForce debug files are intentionally ignored by Git and are generated only when testing F10.
+
+## Showcase
+
 [Fingerprint Scanner](https://youtu.be/3I9eYxjDiOk?t=7)
 
 [Keypad Cracker](https://youtu.be/3I9eYxjDiOk?t=44)
