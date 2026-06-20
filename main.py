@@ -15,7 +15,7 @@ from win32gui import FindWindow, GetWindowRect
 from hacks import bruteforce, casinofingerprint, casinokeypad, cayofingerprint, cayovoltage, hostnumber
 
 VERSION = "Lester-VER3.0"
-BUILD_ID = "2026-06-20-update-test"
+BUILD_ID = "2026-06-20-update-test-success"
 OVERLAY_MS = 7000
 REPO_OWNER = "Hingdragon417"
 REPO_NAME = "Lester-Ver3.0"
@@ -179,6 +179,7 @@ def print_credits():
 Made by JUSTDIE
 Special thanks to RedHeadEmile
     ''')
+    print(f'[*] Updated build loaded successfully ({BUILD_ID})')
 
 class KeybindOverlay:
     def __init__(self):
